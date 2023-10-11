@@ -58,7 +58,7 @@ public class SysUserServiceImpl implements SysUserService {
         String login_id = loginDto.getPassword();
         login_id = DigestUtils.md5DigestAsHex(login_id.getBytes());
 
-        if(db_id .equals(login_id)) {
+        if(db_id.equals(login_id)) {
 //            throw new RuntimeException("密码不正确");
             throw new GguiguException(ResultCodeEnum.LOGIN_ERROR);
         }
