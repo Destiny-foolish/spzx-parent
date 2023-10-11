@@ -6,11 +6,62 @@
 
     <groupId>com.atguigu</groupId>
     <artifactId>spzx-parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spzx-common</module>
+        <module>spzx-model</module>
+        <module>spzx-manager</module>
+    </modules>
+
+    <!-- 指定父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+    </parent>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mysql.verison>8.0.30</mysql.verison>
+        <fastjson.version>2.0.21</fastjson.version>
+        <lombok.version>1.18.20</lombok.version>
+        <mybatis.version>3.0.1</mybatis.version>
     </properties>
-    
+
+    <!-- 管理依赖，版本锁定 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- mybatis和spring boot整合的起步依赖 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- mysql驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!--fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- lombok依赖 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
