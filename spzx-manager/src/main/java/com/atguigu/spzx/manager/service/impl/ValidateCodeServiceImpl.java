@@ -16,27 +16,27 @@ import java.util.concurrent.TimeUnit;
 public class ValidateCodeServiceImpl implements ValidateCodeService {
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String,String> redisTemplate;
     @Override
     public ValidateCodeVo gnerateValidateCode() {
 
         //1.通过工具生成图片验证码 hutool
-        CircleCaptcha circleCaptcha = CaptchaUtil.createCircleCaptcha(150,48,4,3);
+        CircleCaptcha circleCaptcha = CaptchaUtil.createCircleCaptcha(150, 48, 4, 20);
         //2.将验证码存储到redis里面，设置redis的key：uuid redis的value：验证码值
         //3.设置过期时间
         String codeValue = circleCaptcha.getCode();//shegn cheng 4 wei yanzhengma de zhi
-        String image = circleCaptcha.getImageBase64();//fan hui tupian yanzhengma
+        String imageBase64 = circleCaptcha.getImageBase64();//fan hui tupian yanzhengma
 
-        String key = UUID.randomUUID().toString().replaceAll("-","");
+        String codeKey = UUID.randomUUID().toString().replaceAll("-","");
 
-        redisTemplate.opsForValue().set("user:validate" + key,
+        redisTemplate.opsForValue().set("user:login:validatecode:"+codeKey,
                 codeValue,
                 5,
                 TimeUnit.MINUTES);
         //4.返回ValidateCodeVo对象
         ValidateCodeVo validateCodeVo = new ValidateCodeVo();
-        validateCodeVo.setCodeKey(key);//redis中存储的key
-        validateCodeVo.setCodeValue("data:image/png;base64," + image);
+        validateCodeVo.setCodeKey(codeKey);//redis中存储的key
+        validateCodeVo.setCodeValue("data:image/png;base64," + imageBase64);
 
         return validateCodeVo;
     }

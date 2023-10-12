@@ -34,9 +34,10 @@ public class SysUserServiceImpl implements SysUserService {
         String codeKey = loginDto.getCodeKey();
 
         //genju huoqv de redislimiande key,chaxun redislimain de yanzhengma shifouyizhi
-        String redisCode = redisTemplate.opsForValue().get("user:validate" + codeKey);
+        String redisCode = redisTemplate.opsForValue().get("user:login:validatecode:"+codeKey);
+
         //首先，比较验证码是否同步，
-        if(StrUtil.isEmpty(redisCode) || StrUtil.equalsIgnoreCase(redisCode,captcha)) {
+        if(StrUtil.isEmpty(redisCode) || !StrUtil.equalsIgnoreCase(redisCode,captcha)) {
             //如果不一致，提示用户
             throw new GguiguException(ResultCodeEnum.VALIDATECODE_ERROR);
         }
@@ -64,16 +65,16 @@ public class SysUserServiceImpl implements SysUserService {
         }
 
 
-        String key = UUID.randomUUID().toString().replaceAll("-","");
+        String token = UUID.randomUUID().toString().replaceAll("-","");
 
         //向redis里面加入数据
-        redisTemplate.opsForValue().set("user:login" + key,
+        redisTemplate.opsForValue().set("user:login" + token,
                 JSON.toJSONString(sysUser),
                 7,
                 TimeUnit.DAYS);
 
         LoginVo loginVo = new LoginVo();
-        loginVo.setToken(key);
+        loginVo.setToken(token);
 
         return loginVo;
     }
