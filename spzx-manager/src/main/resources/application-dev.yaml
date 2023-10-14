@@ -18,6 +18,11 @@ mybatis:
     config-location: classpath:/mybatis-config.xml
     mapper-locations: classpath:/mapper/*/*.xml
 
+spzx:
+  auth:
+    noAuthUrls:
+      - /admin/system/index/login
+      - /admin/system/index/generateValidateCode
 
 
 

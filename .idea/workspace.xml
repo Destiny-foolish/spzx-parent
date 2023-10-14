@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="10.11">
+      <change afterPath="$PROJECT_DIR$/spzx-common/common-util/src/main/java/com/atguigu/spzx/utils/AuthContextUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/SysRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/interceptor/LoginAuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/properties/UserProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/SysRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/role/SysRoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/ManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/ManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/SysUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/ValidateCodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/ValidateCodeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/resources/application-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/application-dev.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -124,7 +136,7 @@
       <updated>1696943087015</updated>
       <workItem from="1696943088850" duration="14569000" />
       <workItem from="1697027582801" duration="145000" />
-      <workItem from="1697027741365" duration="15220000" />
+      <workItem from="1697027741365" duration="34486000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -154,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697039248901</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="10.11">
+      <created>1697085415019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697085415019</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,12 +199,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysUserServiceImpl.java</url>
-          <line>36</line>
+          <line>40</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysUserServiceImpl.java</url>
-          <line>41</line>
+          <line>43</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
