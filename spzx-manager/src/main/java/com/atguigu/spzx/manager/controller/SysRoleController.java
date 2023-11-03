@@ -16,12 +16,6 @@ public class SysRoleController {
     @Autowired
     private SysRoleService sysRoleService;
 
-    @PostMapping(value = "/saveSysRole")
-    public Result saveSysRole(@RequestBody SysRole sysRole){
-        sysRoleService.saveSysRole(sysRole);
-        return Result.build(null,ResultCodeEnum.SUCCESS);
-    }
-
     /**
      * pageNum代表当前页
      * pageSize 每页显示记录数
@@ -33,6 +27,13 @@ public class SysRoleController {
                              @RequestBody SysRoleDto sysRoleDto){
         PageInfo<SysRole> pageInfo = sysRoleService.findByPage(sysRoleDto,pageNum,pageSize);
         return Result.build(pageInfo, ResultCodeEnum.SUCCESS);
+    }
+
+
+    @PostMapping(value = "/saveSysRole")
+    public Result saveSysRole(@RequestBody SysRole SysRole) {
+        sysRoleService.saveSysRole(SysRole) ;
+        return Result.build(null , ResultCodeEnum.SUCCESS) ;
     }
 
 }
