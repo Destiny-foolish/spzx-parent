@@ -54,4 +54,10 @@
         where
         id = #{id}
     </update>
+
+    <!-- 根据id删除角色数据 -->
+    <update id="deleteById">
+        update sys_role set is_deleted=1 where id=#{roleId}
+    </update>
+
 </mapper>

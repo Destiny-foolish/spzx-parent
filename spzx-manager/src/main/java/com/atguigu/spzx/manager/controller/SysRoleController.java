@@ -42,4 +42,9 @@ public class SysRoleController {
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
     }
 
+    @DeleteMapping(value = "/deleteById/{roleId}")
+    public Result deleteById(@PathVariable(value = "roleId") Long roleId) {
+        sysRoleService.deleteById(roleId);
+        return Result.build(null , ResultCodeEnum.SUCCESS);
+    }
 }

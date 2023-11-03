@@ -34,4 +34,8 @@ public class SysRoleServiceImpl implements SysRoleService {
         sysRoleMapper.updateSysRole(sysRole) ;
     }
 
+    @Override
+    public void deleteById(Long roleId) {
+        sysRoleMapper.deleteById(roleId) ;
+    }
 }
