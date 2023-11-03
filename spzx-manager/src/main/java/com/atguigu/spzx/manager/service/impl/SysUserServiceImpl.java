@@ -6,15 +6,19 @@ import com.atguigu.spzx.common.exception.GguiguException;
 import com.atguigu.spzx.manager.mapper.SysUserMapper;
 import com.atguigu.spzx.manager.service.SysUserService;
 import com.atguigu.spzx.model.dto.system.LoginDto;
+import com.atguigu.spzx.model.dto.system.SysUserDto;
 import com.atguigu.spzx.model.entity.system.SysUser;
 import com.atguigu.spzx.model.vo.common.Result;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import com.atguigu.spzx.model.vo.system.LoginVo;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -96,5 +100,12 @@ public class SysUserServiceImpl implements SysUserService {
         redisTemplate.delete("user:login:" + token);
     }
 
+    @Override
+    public PageInfo<SysUser> findByPage(SysUserDto sysUserDto, Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum , pageSize);
+        List<SysUser> sysUserList = sysUserMapper.findByPage(sysUserDto) ;
+        PageInfo pageInfo = new PageInfo(sysUserList) ;
+        return pageInfo;
+    }
 
 }

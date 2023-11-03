@@ -7,11 +7,32 @@
         phone,avatar,description,status,create_time,
         update_time,is_deleted
     </sql>
+    <sql id="findPageWhere">
+        <where>
+            <if test="keyword != null and keyword != ''">
+                and username like CONCAT('%',#{keyword},'%')
+            </if>
+            <if test="createTimeBegin != null and createTimeBegin != ''">
+                and create_time >= #{createTimeBegin}
+            </if>
+            <if test="createTimeEnd != null and createTimeEnd != ''">
+                and create_time &lt;= #{createTimeEnd}
+            </if>
+            and is_deleted = 0
+        </where>
+    </sql>
 
     <select id="selectByUserName"
             resultType="com.atguigu.spzx.model.entity.system.SysUser">
         select <include refid="columns" /> from sys_user
         where username = #{username} and is_deleted = 0
+    </select>
+
+    <select id="findByPage" resultType="com.atguigu.spzx.model.entity.system.SysUser" >
+        select <include refid="columns" />
+        from sys_user
+        <include refid="findPageWhere"/>
+        order by id desc
     </select>
 
 </mapper>
