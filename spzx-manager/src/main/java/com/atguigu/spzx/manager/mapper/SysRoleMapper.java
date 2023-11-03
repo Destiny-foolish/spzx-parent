@@ -11,4 +11,7 @@ public interface SysRoleMapper {
     List<SysRole> findByPage(SysRoleDto sysRoleDto);
 
     public abstract void saveSysRole(SysRole sysRole);
+
+    public abstract void updateSysRole(SysRole sysRole);
+
 }
