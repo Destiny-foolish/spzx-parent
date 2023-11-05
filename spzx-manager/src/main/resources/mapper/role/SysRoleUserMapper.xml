@@ -18,6 +18,8 @@
                );
     </insert>
 
-    <select id="">
+    <select id="findSysUserRoleByUserId">
+        select role_id from sys_user_role where user_id = #{userId}
+    </select>
 
 </mapper>
