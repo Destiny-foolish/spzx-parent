@@ -40,6 +40,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <scope>provided </scope>
         </dependency>
+        <!-- common-util模块中加入如下依赖 -->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.5.2</version>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -3,7 +3,7 @@
 <mapper namespace="com.atguigu.spzx.manager.mapper.SysRoleMapper">
 
     <resultMap id = "sysRole"
-               type="com.atguigu.spzx.model.entity.system.SysRole">
+               type="com.atguigu.spzx.model.entity.system.SysRole" autoMapping="true">
     </resultMap>
 
     <sql id = "columns">
@@ -59,5 +59,10 @@
     <update id="deleteById">
         update sys_role set is_deleted=1 where id=#{roleId}
     </update>
+
+    <select id = "findAllRoles" resultMap="sysRole">
+        select <include refid="columns" />
+            from sys_role where is_delete = 0
+    </select>
 
 </mapper>

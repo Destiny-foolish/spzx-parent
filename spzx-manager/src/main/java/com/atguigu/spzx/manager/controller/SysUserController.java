@@ -1,6 +1,7 @@
 package com.atguigu.spzx.manager.controller;
 
 import com.atguigu.spzx.manager.service.SysUserService;
+import com.atguigu.spzx.model.dto.system.AssginRoleDto;
 import com.atguigu.spzx.model.dto.system.SysUserDto;
 import com.atguigu.spzx.model.entity.system.SysRole;
 import com.atguigu.spzx.model.entity.system.SysUser;
@@ -16,6 +17,13 @@ public class SysUserController {
 
     @Autowired
     private SysUserService sysUserService ;
+
+
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestBody AssginRoleDto assginRoleDto){
+        sysUserService.doAssign(assginRoleDto);
+        return Result.build(null,ResultCodeEnum.SUCCESS);
+    }
 
     @GetMapping(value = "/findByPage/{pageNum}/{pageSize}")
     public Result<PageInfo<SysUser>> findByPage(SysUserDto sysUserDto ,

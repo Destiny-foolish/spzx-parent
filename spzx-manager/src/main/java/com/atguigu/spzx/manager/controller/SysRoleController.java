@@ -9,6 +9,8 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping(value = "/admin/system/sysRole")
 public class SysRoleController {
@@ -46,5 +48,11 @@ public class SysRoleController {
     public Result deleteById(@PathVariable(value = "roleId") Long roleId) {
         sysRoleService.deleteById(roleId);
         return Result.build(null , ResultCodeEnum.SUCCESS);
+    }
+
+    @GetMapping(value = "/findAllRoles/{userId}")
+    public Result<Map<String, Object>> findAllRoles(@PathVariable(value = "userId") Long userId){
+        Map<String, Object> resultMap = sysRoleService.findAllRoles(userId);
+        return Result.build(resultMap,ResultCodeEnum.SUCCESS);
     }
 }

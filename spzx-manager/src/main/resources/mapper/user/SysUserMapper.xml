@@ -90,4 +90,5 @@
     <update id="deleteById">
         update sys_user set update_time = now(),is_deleted = 1 where id = #{userId}
     </update>
+            
 </mapper>

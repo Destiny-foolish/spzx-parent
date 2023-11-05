@@ -3,8 +3,10 @@ package com.atguigu.spzx.manager.service.impl;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSON;
 import com.atguigu.spzx.common.exception.GguiguException;
+import com.atguigu.spzx.manager.mapper.SysRoleUserMapper;
 import com.atguigu.spzx.manager.mapper.SysUserMapper;
 import com.atguigu.spzx.manager.service.SysUserService;
+import com.atguigu.spzx.model.dto.system.AssginRoleDto;
 import com.atguigu.spzx.model.dto.system.LoginDto;
 import com.atguigu.spzx.model.dto.system.SysUserDto;
 import com.atguigu.spzx.model.entity.system.SysUser;
@@ -28,6 +30,9 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
     private SysUserMapper sysUserMapper;
+
+    @Autowired
+    private SysRoleUserMapper sysRoleUserMapper ;
 
     @Autowired
     private RedisTemplate<String,String> redisTemplate;
@@ -129,5 +134,14 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public void deleteById(Long userId) {
         sysUserMapper.deleteById(userId);
+    }
+
+    @Override
+    public void doAssign(AssginRoleDto assginRoleDto) {
+        sysRoleUserMapper.deleteByUserId(assginRoleDto.getUserId());
+        List<Long> roleIdList = assginRoleDto.getRoleIdList();
+        roleIdList.forEach(roleId->{
+            sysRoleUserMapper.doAssign(assginRoleDto.getUserId(),roleId);
+        });
     }
 }
