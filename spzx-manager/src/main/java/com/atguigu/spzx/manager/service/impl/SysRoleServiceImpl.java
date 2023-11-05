@@ -48,12 +48,15 @@ public class SysRoleServiceImpl implements SysRoleService {
     @Override
     public Map<String, Object> findAllRoles(Long userId) {
         //查询所有角色
-        List<SysRole> sysRoleList = sysRoleMapper.findAllRoles() ;
+        List<SysRole> sysRoleList = sysRoleMapper.findAllRoles();
 
         //查询当前登录用户的角色信息
         List<Long> sysRoles = sysRoleUserMapper.findSysUserRoleByUserId(userId);
+
+        // 构建响应结果数据
         Map<String , Object> resultMap = new HashMap<>() ;
         resultMap.put("allRolesList" , sysRoleList) ;
+        resultMap.put("sysUserRoles", sysRoles);
         return resultMap;
     }
 }

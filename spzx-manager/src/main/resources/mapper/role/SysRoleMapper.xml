@@ -60,9 +60,10 @@
         update sys_role set is_deleted=1 where id=#{roleId}
     </update>
 
-    <select id = "findAllRoles" resultMap="sysRole">
+    <!-- 查询所有的角色数据 -->
+    <select id="findAllRoles" resultMap="sysRole">
         select <include refid="columns" />
-            from sys_role where is_delete = 0
+        from sys_role where is_deleted = 0
     </select>
 
 </mapper>

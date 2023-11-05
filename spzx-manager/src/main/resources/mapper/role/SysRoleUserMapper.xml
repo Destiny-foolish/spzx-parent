@@ -4,22 +4,17 @@
 
 
     <delete id="deleteByUserId">
-        delete from sys_user_role where user_id = #{userId}
+        delete from sys_user_role sur where sur.user_id = #{userId}
     </delete>
 
     <insert id="doAssign">
-        insert into sys_user_role (user_id , role_id , create_time , update_time , is_deleted)
-        values (
-                   #{userId},
-                   #{roleId},
-                   now(),
-                   now(),
-                   0
-               );
+        insert into sys_user_role(user_id , role_id , create_time , update_time , is_deleted)
+        values ( #{userId} , #{roleId} , now() , now() , 0)
     </insert>
 
-    <select id="findSysUserRoleByUserId">
-        select role_id from sys_user_role where user_id = #{userId}
+    <!-- 查询指定用户所对应的角色数据 -->
+    <select id="findSysUserRoleByUserId" resultType="long">
+        select role_id from sys_user_role sur where sur.user_id = #{userId}
     </select>
 
 </mapper>
