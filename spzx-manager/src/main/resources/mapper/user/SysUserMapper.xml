@@ -35,4 +35,59 @@
         order by id desc
     </select>
 
+    <insert id="saveSysUser">
+        insert into sys_user(
+            id,
+            username,
+            password,
+            name,
+            phone,
+            avatar,
+            description,
+            status
+        )values (
+            #{id},
+            #{userName},
+            #{password},
+            #{name},
+            #{phone},
+            #{avatar},
+            #{description},
+            #{status}
+        )
+    </insert>
+
+    <select id="findByUserName" resultType="com.atguigu.spzx.model.entity.system.SysUser">
+        select <include refid="columns"/> from sys_user where username = #{userName}
+    </select>
+
+<!--    updateSysUser-->
+    <update id="updateSysUser">
+        update sys_user set
+        <if test="userName != null and userName != ''">
+            username = #{userName},
+        </if>
+        <if test="password != null and password != ''">
+            password = #{password},
+        </if>
+        <if test="name != null and name != ''">
+            name = #{name},
+        </if>
+        <if test="phone != null and phone != ''">
+            phone = #{phone},
+        </if>
+        <if test="description != null and description != ''">
+            description = #{description},
+        </if>
+        <if test="status != null and status != ''">
+            status = #{status},
+        </if>
+        update_time = now()
+        where
+        id = #{id}
+    </update>
+
+    <update id="deleteById">
+        update sys_user set update_time = now(),is_deleted = 1 where id = #{userId}
+    </update>
 </mapper>

@@ -25,4 +25,21 @@ public class SysUserController {
         return Result.build(pageInfo , ResultCodeEnum.SUCCESS) ;
     }
 
+    @PostMapping(value = "/saveSysUser")
+    public Result saveSysUser(@RequestBody SysUser sysUser){
+        sysUserService.saveSysUser(sysUser);
+        return Result.build(null,ResultCodeEnum.SUCCESS);
+    }
+
+    @PutMapping(value = "/updateSysUser")
+    public Result updateSysUser(@RequestBody SysUser sysUser){
+        sysUserService.updateSysUser(sysUser);
+        return Result.build(null,ResultCodeEnum.SUCCESS);
+    }
+
+    @DeleteMapping(value = "/deleteById/{userId}")
+    public Result deleteById(@PathVariable(value = "userId")Long userId){
+        sysUserService.deleteById(userId);
+        return Result.build(null,ResultCodeEnum.SUCCESS);
+    }
 }

@@ -12,4 +12,12 @@ public interface SysUserMapper{
     public abstract SysUser selectByUserName(String username);
 
     List<SysUser> findByPage(SysUserDto sysUserDto);
+
+    public abstract void saveSysUser(SysUser sysUser);
+
+    public abstract SysUser findByUserName(String userName);
+
+    public abstract void updateSysUser(SysUser sysUser);
+
+    public abstract void deleteById(Long userId);
 }

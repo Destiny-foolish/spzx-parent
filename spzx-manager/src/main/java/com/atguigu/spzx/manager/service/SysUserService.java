@@ -14,4 +14,10 @@ public interface SysUserService {
     void logout(String token);
 
     PageInfo<SysUser> findByPage(SysUserDto sysUserDto, Integer pageNum, Integer pageSize);
+
+    void saveSysUser(SysUser sysUser);
+
+    void updateSysUser(SysUser sysUser);
+
+    void deleteById(Long userId);
 }

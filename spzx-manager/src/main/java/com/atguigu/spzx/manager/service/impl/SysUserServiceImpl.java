@@ -18,6 +18,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -108,4 +109,25 @@ public class SysUserServiceImpl implements SysUserService {
         return pageInfo;
     }
 
+    @Override
+    public void updateSysUser(SysUser sysUser) {
+        sysUserMapper.updateSysUser(sysUser);
+    }
+
+    @Override
+    public void saveSysUser(SysUser sysUser) {
+        SysUser dbSysUser = sysUserMapper.findByUserName(sysUser.getUserName());
+        if(dbSysUser != null) {
+            throw new GguiguException(ResultCodeEnum.USER_NAME_IS_EXISTS);
+        }
+        String pwd = DigestUtils.md5DigestAsHex(sysUser.getPassword().getBytes());
+        sysUser.setPassword(pwd);
+        sysUser.setStatus(0);
+        sysUserMapper.saveSysUser(sysUser);
+    }
+
+    @Override
+    public void deleteById(Long userId) {
+        sysUserMapper.deleteById(userId);
+    }
 }
