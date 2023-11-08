@@ -10,4 +10,10 @@ public interface SysMenuMapper {
     List<SysMenu> selectAll();
 
     void insert(SysMenu sysMenu);
+
+    void updateById(SysMenu sysMenu);
+
+    void removeById(Long id);
+
+    int countByParentId();
 }

@@ -31,4 +31,36 @@
                  )
     </insert>
 
+    <update id="updateById">
+        update sys_menu set
+        <if test="parentId != null and parentId != ''">
+            parent_id = #{parentId},
+        </if>
+        <if test="title != null and title != ''">
+            title = #{title},
+        </if>
+        <if test="component != null and component != ''">
+            component = #{component},
+        </if>
+        <if test="sortValue != null and sortValue != ''">
+            sort_value = #{sortValue},
+        </if>
+        <if test="status != null and status != ''">
+            status = #{status},
+        </if>
+                            update_time = now()
+                            where id = #{id}
+    </update>
+
+    <select id="countByParentId" resultType="integer">
+        select count(id) from sys_menu where parent_id = #{parentId} and is_deleted = 0
+    </select>
+    <delete id="removeById">
+        update sys_menu set
+            update_time = now() ,
+            is_deleted = 1
+        where
+            id = #{id}
+    </delete>
+
 </mapper>

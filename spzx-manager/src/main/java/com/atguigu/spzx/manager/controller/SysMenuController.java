@@ -16,6 +16,18 @@ public class SysMenuController {
     @Autowired
     private SysMenuService sysMenuService;
 
+    @DeleteMapping("/removeById/{id}")
+    public Result removeById(@PathVariable Long id) {
+        sysMenuService.removeById(id);
+        return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
+    @PutMapping("/update")
+    public Result updateById(@RequestBody SysMenu sysMenu){
+        sysMenuService.updateById(sysMenu);
+        return Result.build(null,ResultCodeEnum.SUCCESS);
+    }
+
     @PostMapping("/save")
     public Result save(@RequestBody SysMenu sysMenu){
         sysMenuService.save(sysMenu);
