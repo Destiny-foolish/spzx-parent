@@ -19,4 +19,8 @@
                 (#{roleId}, #{menuIdIfo.id}, now(), now(), 0, #{menuIdIfo.isHalf})
             </foreach>
     </insert>
+
+    <update id="updateSysRoleMenuIsHalf">
+        update sys_role_menu srm set srm.is_half = 1 where menu_id = #{menuId}
+    </update>
 </mapper>
