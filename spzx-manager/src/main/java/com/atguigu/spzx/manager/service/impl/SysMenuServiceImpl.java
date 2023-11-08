@@ -5,12 +5,18 @@ import com.atguigu.spzx.manager.helper.MenuHelper;
 import com.atguigu.spzx.manager.mapper.SysMenuMapper;
 import com.atguigu.spzx.manager.service.SysMenuService;
 import com.atguigu.spzx.model.entity.system.SysMenu;
+import com.atguigu.spzx.model.entity.system.SysUser;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
+import com.atguigu.spzx.model.vo.system.SysMenuVo;
+import com.atguigu.spzx.utils.AuthContextUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class SysMenuServiceImpl implements SysMenuService {
@@ -45,5 +51,32 @@ public class SysMenuServiceImpl implements SysMenuService {
             throw new GguiguException(ResultCodeEnum.NODE_ERROR);
         }
         sysMenuMapper.removeById(id);
+    }
+
+    @Override
+    public List<SysMenuVo> findUserMenuList() {
+        SysUser sysUser = AuthContextUtil.get();
+        Long userid = sysUser.getId();
+
+        List<SysMenu> sysMenuList = sysMenuMapper.selectListByUserId(userid);
+
+        List<SysMenu> sysMenuTreeList = MenuHelper.buildTree(sysMenuList);
+
+        return this.buildMenus(sysMenuTreeList);
+    }
+
+    private List<SysMenuVo> buildMenus(List<SysMenu> menus){
+        List<SysMenuVo> sysMenuVoList = new LinkedList<SysMenuVo>();
+        for (SysMenu sysMenu : menus) {
+            SysMenuVo sysMenuVo = new SysMenuVo();
+            sysMenuVo.setTitle(sysMenu.getTitle());
+            sysMenuVo.setName(sysMenu.getComponent());
+            List<SysMenu> children = sysMenu.getChildren();
+            if (!CollectionUtils.isEmpty(children)) {
+                sysMenuVo.setChildren(buildMenus(children));
+            }
+            sysMenuVoList.add(sysMenuVo);
+        }
+        return sysMenuVoList;
     }
 }

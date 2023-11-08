@@ -3,6 +3,7 @@ package com.atguigu.spzx.manager.service.impl;
 import com.atguigu.spzx.manager.mapper.SysRoleMenuMapper;
 import com.atguigu.spzx.manager.service.SysMenuService;
 import com.atguigu.spzx.manager.service.SysRoleMenuService;
+import com.atguigu.spzx.model.dto.system.AssginMenuDto;
 import com.atguigu.spzx.model.entity.system.SysMenu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,5 +33,17 @@ public class SysRoleMenuServiceImpl implements SysRoleMenuService {
         result.put("roleMenuIds" , roleMenuIds);
 
         return result;
+    }
+
+    @Override
+    public void doAssign(AssginMenuDto assginMenuDto) {
+        // 根据角色的id删除其所对应的菜单数据
+        sysRoleMenuMapper.deleteByRoleId(assginMenuDto.getRoleId());
+        // 获取菜单的id
+        List<Map<String, Number>> list = assginMenuDto.getMenuIdList();
+        if(list != null && list.size() > 0){
+            sysRoleMenuMapper.doAssign(assginMenuDto);
+        }
+
     }
 }
