@@ -19,10 +19,15 @@ mybatis:
     mapper-locations: classpath:/mapper/*/*.xml
 
 spzx:
+  minio:
+    endpointUrl: http://127.0.0.1:9000
+    accessKey: minioadmin
+    secreKey: minioadmin
+    bucketName: spzx-bucket
+
   auth:
     noAuthUrls:
       - /admin/system/index/login
       - /admin/system/index/generateValidateCode
-
 
 
