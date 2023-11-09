@@ -10,4 +10,12 @@ public interface CategoryMapper {
     List<Category> selectByParentId(Long parentId);
 
     int seleCount(Long id);
+
+    List<Category> selectAll();
+
+    //批量保存方法
+    public abstract void batchInsert(List<Category> categoryList);
+
+
+
 }

@@ -17,4 +17,38 @@
     <select id="seleCount" resultType="int">
         select count(id) from category where parent_id = #{id} and is_deleted = 0
     </select>
+
+    <select id="selectAll" resultMap="categoryMap">
+        select <include refid="columns" />
+        from category
+        where is_deleted = 0
+        order by id
+    </select>
+
+    <insert id="batchInsert" useGeneratedKeys="true" keyProperty="id">
+        insert into category (
+        id,
+        name,
+        image_url,
+        parent_id,
+        status,
+        order_num,
+        create_time ,
+        update_time ,
+        is_deleted
+        ) values
+        <foreach collection="categoryList" item="item" separator="," >
+            (
+            #{item.id},
+            #{item.name},
+            #{item.imageUrl},
+            #{item.parentId},
+            #{item.status},
+            #{item.orderNum},
+            now(),
+            now(),
+            0
+            )
+        </foreach>
+    </insert>
 </mapper>
