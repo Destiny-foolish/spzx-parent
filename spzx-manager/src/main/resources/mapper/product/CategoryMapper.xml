@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.spzx.manager.mapper.CategoryMapper">
+    <resultMap id="categoryMap" type="com.atguigu.spzx.model.entity.product.Category" autoMapping="true">
+    </resultMap>
+    <sql id="columns">
+        id,name,image_url,parent_id,status,order_num,create_time,update_time,is_deleted
+    </sql>
+
+    <select id="selectByParentId" resultMap="categoryMap">
+        select <include refid="columns" /> from category
+                where parent_id = #{parentId}
+                  and is_deleted = 0
+                order by id desc
+    </select>
+
+    <select id="seleCount" resultType="int">
+        select count(id) from category where parent_id = #{id} and is_deleted = 0
+    </select>
+</mapper>

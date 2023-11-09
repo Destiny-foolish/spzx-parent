@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="11.8">
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/product/CategoryMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysMenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysRoleMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysRoleMenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/menu/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/menu/SysMenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/rolemenu/SysRoleMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/rolemenu/SysRoleMenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-model/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +88,9 @@
       <recent name="F:\zwork\javaProject\spzx-parent\spzx-manager\src\main\resources" />
       <recent name="F:\zwork\javaProject\spzx-parent\spzx-model\src\main\java" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\zwork\javaProject\spzx-parent\spzx-manager\src\main\resources\mapper\product" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.atguigu.spzx.manager.mapper" />
     </key>
@@ -102,7 +106,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ManagerApplication">
+  <component name="RunManager" selected="Application.EasyExcelTest">
+    <configuration name="EasyExcelTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.spzx.manager.test.EasyExcelTest" />
+      <module name="spzx-manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spzx.manager.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FileUploadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileUploadTest" />
       <module name="common-util" />
@@ -125,6 +142,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EasyExcelTest" />
         <item itemvalue="Spring Boot.ManagerApplication" />
         <item itemvalue="Application.FileUploadTest" />
       </list>
@@ -143,7 +161,7 @@
       <workItem from="1697027741365" duration="34486000" />
       <workItem from="1698995420200" duration="4702000" />
       <workItem from="1699000209664" duration="18585000" />
-      <workItem from="1699418737507" duration="28578000" />
+      <workItem from="1699418737507" duration="36386000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -285,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699455578229</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="11.8">
+      <created>1699458476930</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699458476930</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,16 +341,6 @@
           <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/SysMenuController.java</url>
           <line>32</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysMenuServiceImpl.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/SysMenuServiceImpl.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
