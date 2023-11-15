@@ -64,4 +64,70 @@ public class ProductServiceImpl implements ProductService {
         productDetails.setImageUrls(product.getDetailsImageUrls());
         productDetailsMapper.save(productDetails);
     }
+
+    @Override
+    public Product getById(Long id) {
+        // 根据id查询商品数据
+        Product product = productMapper.selectById(id);
+        // 根据商品的id查询sku数据
+        List<ProductSku> productSkuList = productSkuMapper.selectByProductId(id);
+        product.setProductSkuList(productSkuList);
+        // 根据商品的id查询商品详情数据
+        ProductDetails productDetails = productDetailsMapper.selectByProductId(product.getId());
+        product.setDetailsImageUrls(productDetails.getImageUrls());
+        // 返回数据
+        return product;
+    }
+
+    @Override
+    public void updateById(Product product) {
+        // 修改商品基本数据
+        productMapper.updateById(product);
+        // 修改商品的sku数据
+        List<ProductSku> productSkuList = product.getProductSkuList();
+        productSkuList.forEach(productSku -> {
+            productSkuMapper.updateById(productSku);
+        });
+        // 修改商品的详情数据
+        ProductDetails productDetails = productDetailsMapper.selectByProductId(product.getId());
+        productDetails.setImageUrls(product.getDetailsImageUrls());
+        productDetailsMapper.updateById(productDetails);
+
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        // 根据id删除商品基本数据
+        productMapper.deleteById(id);
+        // 根据商品id删除商品的sku数据
+        productSkuMapper.deleteByProductId(id);
+        // 根据商品的id删除商品的详情数据
+        productDetailsMapper.deleteByProductId(id);
+    }
+
+    @Override
+    public void updateAuditStatus(Long id, Integer auditStatus) {
+        Product product = new Product();
+        product.setId(id);
+        if(auditStatus == 1) {
+            product.setAuditStatus(1);
+            product.setAuditMessage("审批通过");
+        } else {
+            product.setAuditStatus(-1);
+            product.setAuditMessage("审批不通过");
+        }
+        productMapper.updateById(product);
+    }
+
+    @Override
+    public void updateStatus(Long id, Integer status) {
+        Product product = new Product();
+        product.setId(id);
+        if(status == 1) {
+            product.setStatus(1);
+        } else {
+            product.setStatus(-1);
+        }
+        productMapper.updateById(product);
+    }
 }
