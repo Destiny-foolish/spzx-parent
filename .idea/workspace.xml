@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 完成09 11.15">
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/annotation/EnableLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/annotation/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/enums/OperatorType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 10 11.15">
+      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/service/AsyncOperLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/utils/LogUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysOperLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/AsyncOperLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/operlog/SysOperLogMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/ManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/ManagerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/BrandController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -168,7 +166,7 @@
       <workItem from="1698995420200" duration="4702000" />
       <workItem from="1699000209664" duration="18585000" />
       <workItem from="1699418737507" duration="46303000" />
-      <workItem from="1700020175972" duration="14939000" />
+      <workItem from="1700020175972" duration="16810000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -394,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700051085556</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="excel导入 图上传 10 11.15">
+      <created>1700052662385</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700052662385</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +432,8 @@
     <MESSAGE value="08 11.15 easyexcel导入" />
     <MESSAGE value="easyexcel导入 图片上传 09 11.15" />
     <MESSAGE value="excel导入 图上传 完成09 11.15" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel导入 图上传 完成09 11.15" />
+    <MESSAGE value="excel导入 图上传 10 11.15" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel导入 图上传 10 11.15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -441,6 +447,21 @@
           <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/listener/ExcelListener.java</url>
           <line>93</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/SysRoleController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/AsyncOperLogServiceImpl.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

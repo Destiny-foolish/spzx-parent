@@ -1,10 +1,12 @@
 package com.atguigu.spzx.manager.controller;
 
+import annotation.Log;
 import com.atguigu.spzx.manager.service.BrandService;
 import com.atguigu.spzx.model.entity.product.Brand;
 import com.atguigu.spzx.model.vo.common.Result;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import com.github.pagehelper.PageInfo;
+import enums.OperatorType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +18,7 @@ public class BrandController {
 
     @Autowired
     private BrandService brandService;
-
+    @Log(title = "品牌",businessType = 0,operatorType = OperatorType.MANAGE)
     @GetMapping("/{page}/{limit}")
     public Result<PageInfo<Brand>> findByPage(@PathVariable Integer page, @PathVariable Integer limit) {
         PageInfo<Brand> pageInfo = brandService.findByPage(page, limit);
