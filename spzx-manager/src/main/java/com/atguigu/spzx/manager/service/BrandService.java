@@ -9,4 +9,6 @@ public interface BrandService {
     void save(Brand brand);
 
     void updateById(Brand brand);
+
+    void deleteById(Long id);
 }

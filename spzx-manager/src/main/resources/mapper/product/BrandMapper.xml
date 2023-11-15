@@ -46,6 +46,12 @@
         id = #{id}
     </update>
 
-
+    <update id="deleteById">
+    update brand set
+        update_time = now() ,
+        is_deleted = 1
+    where
+    id = #{id}
+    </update>
 
 </mapper>
