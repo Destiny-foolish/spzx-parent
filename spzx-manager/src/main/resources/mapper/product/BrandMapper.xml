@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.spzx.manager.mapper.BrandMapper">
+    <resultMap id="brandMap" type="com.atguigu.spzx.model.entity.product.Brand" autoMapping="true">
+    </resultMap>
+
+    <sql id="columns">
+        id,name,logo,create_time,update_time,is_deleted
+    </sql>
+
+    <select id="findByPage" resultMap="brandMap">
+        select <include refid="columns" />
+        from brand
+        where is_deleted = 0
+        order by id desc
+    </select>
+
+    <insert id="save">
+    insert into brand (
+        id,
+        name,
+        logo,
+        create_time ,
+        update_time ,
+        is_deleted
+    ) values (
+        #{id},
+        #{name},
+        #{logo},
+        now(),
+        now(),
+        0
+    )
+</insert>
+
+
+
+</mapper>
