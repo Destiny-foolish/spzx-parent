@@ -22,4 +22,19 @@ public class CategoryBrandServiceImpl implements CategoryBrandService {
         List<CategoryBrand> categoryBrandList = categoryBrandMapper.findByPage(categoryBrandDto) ;
         return new PageInfo<>(categoryBrandList);
     }
+
+    @Override
+    public void save(CategoryBrand categoryBrand) {
+        categoryBrandMapper.save(categoryBrand);
+    }
+
+    @Override
+    public void updateById(CategoryBrand categoryBrand) {
+        categoryBrandMapper.updateById(categoryBrand) ;
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        categoryBrandMapper.deleteById(id);
+    }
 }

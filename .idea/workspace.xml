@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="11.15 easyexcel导入功能，品牌整个模块">
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/CategoryBrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/CategoryBrandMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/CategoryBrandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/CategoryBrandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/product/CategoryBrandMapper.xml" afterDir="false" />
+    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="11.15 easyexcel导入，品牌模块">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/BrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/BrandMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/BrandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/BrandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/product/BrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/product/BrandMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/CategoryBrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/CategoryBrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/CategoryBrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/CategoryBrandMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/CategoryBrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/CategoryBrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/CategoryBrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/CategoryBrandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/product/CategoryBrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/product/CategoryBrandMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +161,7 @@
       <workItem from="1698995420200" duration="4702000" />
       <workItem from="1699000209664" duration="18585000" />
       <workItem from="1699418737507" duration="46303000" />
-      <workItem from="1700020175972" duration="4709000" />
+      <workItem from="1700020175972" duration="6159000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -357,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700023840369</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="11.15 easyexcel导入，品牌模块">
+      <created>1700025251171</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700025251171</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +387,8 @@
     <MESSAGE value="11.15导入功能有问题，图片上传待修改，暂时提交" />
     <MESSAGE value="11.15" />
     <MESSAGE value="11.15 easyexcel导入功能，品牌整个模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.15 easyexcel导入功能，品牌整个模块" />
+    <MESSAGE value="11.15 easyexcel导入，品牌模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.15 easyexcel导入，品牌模块" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
