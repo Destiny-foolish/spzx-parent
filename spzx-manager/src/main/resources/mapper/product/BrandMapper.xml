@@ -54,4 +54,12 @@
     id = #{id}
     </update>
 
+
+    <select id="findAll" resultMap="brandMap">
+        select <include refid="columns" />
+        from brand
+        where is_deleted = 0
+        order by id desc
+    </select>
+
 </mapper>

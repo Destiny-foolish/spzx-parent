@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.spzx.manager.mapper.CategoryBrandMapper">
+
+    <resultMap id="categoryBrandMap" type="com.atguigu.spzx.model.entity.product.CategoryBrand" autoMapping="true">
+    </resultMap>
+    <sql id="columns">
+		id,brand_id,category_id,create_time,update_time,is_deleted
+	</sql>
+    <sql id="findPageWhere">
+        <where>
+            <if test="brandId != null and brandId != ''">
+                and cb.brand_id = #{brandId}
+            </if>
+            <if test="categoryId != null and categoryId != ''">
+                and cb.category_id = #{categoryId}
+            </if>
+            and cb.is_deleted = 0
+        </where>
+    </sql>
+
+    <select id="findByPage" resultMap="categoryBrandMap">
+        select
+        cb.id,cb.brand_id,cb.category_id,cb.create_time,cb.update_time,
+        c.name as categoryName,
+        b.name as brandName, b.logo
+        from category_brand cb
+        left join category c on c.id = cb.category_id
+        left join brand b  on b.id = cb.brand_id
+        <include refid="findPageWhere"/>
+        order by cb.id desc
+    </select>
+
+
+</mapper>
