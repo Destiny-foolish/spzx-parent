@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.spzx.manager.mapper.ProductSkuMapper">
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into product_sku (
+            id,
+            sku_code,
+            sku_name,
+            product_id,
+            thumb_img,
+            sale_price,
+            market_price,
+            cost_price,
+            stock_num,
+            sku_spec,
+            weight,
+            volume,
+            status,
+            sale_num,
+            create_time,
+            update_time,
+            is_deleted
+        ) values (
+             #{id},
+             #{skuCode},
+             #{skuName},
+             #{productId},
+             #{thumbImg},
+             #{salePrice},
+             #{marketPrice},
+             #{costPrice},
+             #{stockNum},
+             #{skuSpec},
+             #{weight},
+             #{volume},
+             #{status},
+             #{saleNum},
+             now(),
+             now(),
+             0
+         )
+    </insert>
+</mapper>

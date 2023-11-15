@@ -4,6 +4,9 @@
 
     <resultMap id="categoryBrandMap" type="com.atguigu.spzx.model.entity.product.CategoryBrand" autoMapping="true">
     </resultMap>
+    <resultMap id="brandMap" type="com.atguigu.spzx.model.entity.product.Brand" autoMapping="true">
+    </resultMap>
+
     <sql id="columns">
 		id,brand_id,category_id,create_time,update_time,is_deleted
 	</sql>
@@ -69,4 +72,13 @@
     where
     	id = #{id}
     </update>
+
+    <select id="findBrandByCategoryId" resultMap="brandMap">
+    select
+    b.*
+    from category_brand cb
+    left join brand b  on b.id = cb.brand_id
+    where cb.category_id = #{categoryId} and cb.is_deleted = 0
+    order by cb.id desc
+     </select>
 </mapper>

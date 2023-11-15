@@ -52,6 +52,11 @@
         is_deleted = 1
     where
     	id = #{id}
-</update>
+    </update>
 
+    <select id="findAll" resultMap="productSpecMap">
+        select <include refid="columns" />
+        from product_spec
+        order by id desc
+    </select>
 </mapper>

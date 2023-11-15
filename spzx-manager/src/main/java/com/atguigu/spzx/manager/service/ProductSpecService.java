@@ -3,6 +3,8 @@ package com.atguigu.spzx.manager.service;
 import com.atguigu.spzx.model.entity.product.ProductSpec;
 import com.github.pagehelper.PageInfo;
 
+import java.util.List;
+
 public interface ProductSpecService {
     PageInfo<ProductSpec> findByPage(Integer page, Integer limit);
 
@@ -11,4 +13,6 @@ public interface ProductSpecService {
     void updateById(ProductSpec productSpec);
 
     void deleteById(Long id);
+
+    List<ProductSpec> findAll();
 }
