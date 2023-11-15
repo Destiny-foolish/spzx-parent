@@ -31,7 +31,20 @@
         now(),
         0
     )
-</insert>
+    </insert>
+
+    <update id="updateById" >
+        update brand set
+        <if test="name != null and name != ''">
+            name = #{name},
+        </if>
+        <if test="logo != null and logo != ''">
+            logo = #{logo},
+        </if>
+        update_time =  now()
+        where
+        id = #{id}
+    </update>
 
 
 
