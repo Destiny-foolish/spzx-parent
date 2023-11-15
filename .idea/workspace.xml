@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 10 11.15">
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/service/AsyncOperLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/utils/LogUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/mapper/SysOperLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/AsyncOperLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/operlog/SysOperLogMapper.xml" afterDir="false" />
+    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 11over 11.15">
+      <change afterPath="$PROJECT_DIR$/spzx-server-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service-client/service-product-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service-client/service-user-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-order/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/ProductApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-service/service-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-common/common-log/src/main/java/utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/BrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +47,7 @@
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\z_spzxmavenrepo" />
         <option name="mavenHome" value="D:/java/apache-maven-3.8.4" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -62,7 +70,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "F:/zwork/javaProject/spzx-parent/spzx-manager/src/main/resources",
+    "last_opened_file_path": "F:/zwork/javaProject/spzx-parent/spzx-service/service-product/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +97,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\zwork\javaProject\spzx-parent\spzx-service\service-product\src\main\resources" />
       <recent name="F:\zwork\javaProject\spzx-parent\spzx-manager\src\main\resources" />
       <recent name="F:\zwork\javaProject\spzx-parent\spzx-model\src\main\java" />
     </key>
@@ -166,7 +175,7 @@
       <workItem from="1698995420200" duration="4702000" />
       <workItem from="1699000209664" duration="18585000" />
       <workItem from="1699418737507" duration="46303000" />
-      <workItem from="1700020175972" duration="16810000" />
+      <workItem from="1700020175972" duration="18992000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -399,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700052662385</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="excel导入 图上传 10 11.15">
+      <created>1700054490053</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700054490053</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +449,8 @@
     <MESSAGE value="easyexcel导入 图片上传 09 11.15" />
     <MESSAGE value="excel导入 图上传 完成09 11.15" />
     <MESSAGE value="excel导入 图上传 10 11.15" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel导入 图上传 10 11.15" />
+    <MESSAGE value="excel导入 图上传 11over 11.15" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel导入 图上传 11over 11.15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -452,11 +469,6 @@
           <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/controller/SysRoleController.java</url>
           <line>37</line>
           <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/atguigu/spzx/manager/service/impl/AsyncOperLogServiceImpl.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/spzx-common/common-log/src/main/java/aspect/LogAspect.java</url>
