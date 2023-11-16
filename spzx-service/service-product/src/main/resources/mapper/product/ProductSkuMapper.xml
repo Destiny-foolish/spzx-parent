@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.spzx.product.mapper.ProductSkuMapper">
+    <resultMap id="productSkuMap" type="com.atguigu.spzx.model.entity.product.ProductSku" autoMapping="true">
+    </resultMap>
+
+   <!-- 用于select查询公用抽取的列 -->
+   <sql id="columns">
+      id,sku_code,sku_name,product_id,thumb_img,sale_price,market_price,cost_price,stock_num,sale_num,sku_spec,weight,volume,status,create_time,update_time,is_deleted
+   </sql>
+
+   <select id="findProductSkuBySale" resultMap="productSkuMap">
+      select
+          sku.id,sku.sku_code,sku.sku_name,sku.product_id,sku.thumb_img,sku.sale_price,sku.market_price,sku.cost_price,sku.stock_num,sku.sale_num,sku.sku_spec,sku.weight,sku.volume,sku.status,sku.create_time,sku.update_time,sku.is_deleted
+      from product_sku sku
+         left join product p on p.id = sku.product_id
+      where
+         p.status = 1
+         and p.audit_status = 1
+         and sku.is_deleted = 0
+         and p.is_deleted = 0
+         order by sku.sale_num desc
+      limit 20
+   </select>
+
+</mapper>
