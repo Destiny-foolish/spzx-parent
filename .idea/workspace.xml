@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 12 11.16">
-      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-server-gateway/src/main/java/com/atguigu/spzx/gateway/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-server-gateway/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-server-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/mapper/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/java/com/atguigu/spzx/product/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/mapper/product/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/mapper/product/CategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-common/common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-common/common-util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-server-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-server-gateway/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,6 +102,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn install:install-file -DgroupId=com.alipay.sdk -DartifactId=alipay-sdk-java -Dversion=4.8.73.ALL -Dpackaging=jar -Dfile=alipay-sdk-java-4.8.73.ALL.jar" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -116,7 +116,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="EasyExcelTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.spzx.manager.test.EasyExcelTest" />
       <module name="spzx-manager" />
@@ -133,6 +133,19 @@
     <configuration name="FileUploadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileUploadTest" />
       <module name="common-util" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spzx-server-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.spzx.gateway.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spzx.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,6 +178,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.ManagerApplication" />
         <item itemvalue="Application.EasyExcelTest" />
@@ -186,7 +200,7 @@
       <workItem from="1698995420200" duration="4702000" />
       <workItem from="1699000209664" duration="18585000" />
       <workItem from="1699418737507" duration="46303000" />
-      <workItem from="1700020175972" duration="28549000" />
+      <workItem from="1700020175972" duration="30267000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -440,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700111646497</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="excel导入 图上传 12 11.16">
+      <created>1700124054567</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1700124054567</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
