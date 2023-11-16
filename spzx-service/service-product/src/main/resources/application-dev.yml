@@ -4,10 +4,12 @@ server:
 spring:
   application:
     name: service-product
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: localhost:8848
+  cloud:
+    nacos:
+      discovery:
+#        server-addr: 192.168.45.134:8848
+        server-addr: localhost:8848
+
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
