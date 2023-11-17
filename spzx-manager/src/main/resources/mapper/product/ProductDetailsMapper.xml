@@ -51,6 +51,12 @@
     is_deleted = 1
     where
     product_id = #{productId}
-</update>
+    </update>
 
+    <select id="getByProductId" resultMap="productDetailsMap">
+        select <include refid="columns" />
+        from product_details
+        where
+        product_id = #{productId}
+    </select>
 </mapper>

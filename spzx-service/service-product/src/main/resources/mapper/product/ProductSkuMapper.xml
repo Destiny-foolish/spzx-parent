@@ -61,4 +61,18 @@
       </if>
    </select>
 
+   <select id="getById" resultMap="productSkuMap">
+      select <include refid="columns" />
+      from product_sku
+      where
+      id = #{id}
+   </select>
+
+   <select id="findByProductId" resultMap="productSkuMap">
+      select <include refid="columns" />
+      from product_sku
+      where
+      product_id = #{productId}
+   </select>
+
 </mapper>

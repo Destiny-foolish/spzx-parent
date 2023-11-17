@@ -137,6 +137,13 @@
     is_deleted = 1
     where
     id = #{id}
-</update>
+    </update>
+
+    <select id="getById" resultMap="productMap">
+        select <include refid="columns" />
+        from product
+        where
+        id = #{id}
+    </select>
 
 </mapper>

@@ -11,4 +11,8 @@ public interface ProductSkuMapper {
     List<ProductSku> findProductSkuBySale();
 
     List<ProductSku> findByPage(ProductSkuDto productSkuDto);
+
+    ProductSku getById(Long skuId);
+
+    List<ProductSku> findByProductId(Long productId);
 }
