@@ -1,11 +1,12 @@
 package com.atguigu.spzx.user.service.impl;
 
-import cn.hutool.http.HttpResponse;
+
 import com.atguigu.spzx.common.exception.GguiguException;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import com.atguigu.spzx.user.service.SmsService;
 import com.atguigu.spzx.utils.HttpUtils;
 import org.apache.commons.lang.RandomStringUtils;
+import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
