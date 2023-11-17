@@ -31,6 +31,14 @@ spring:
           uri: lb://service-user
           predicates:
             - Path=/*/user/**
+        - id: service-cart
+          uri: lb://service-cart
+          predicates:
+            - Path=/api/order/cart/**
+        - id: service-order
+          uri: lb://service-order
+          predicates:
+            - Path=/api/order/orderInfo/**
 
   data:
     redis:
