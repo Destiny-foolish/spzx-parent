@@ -1,13 +1,17 @@
 package com.atguigu.spzx.product.service.impl;
 
+import com.alibaba.fastjson2.JSON;
 import com.atguigu.spzx.model.entity.product.Category;
 import com.atguigu.spzx.product.mapper.CategoryMapper;
 import com.atguigu.spzx.product.service.CategoryService;
 import com.github.xiaoymin.knife4j.core.util.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Service
@@ -16,9 +20,24 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
+
     @Override
     public List<Category> findOneCategory() {
-        return categoryMapper.findOneCategory();
+        String categoryOneJaon = redisTemplate.opsForValue().get("category:one");//get里面的都是自己约定的key值
+        if(StringUtils.hasText(categoryOneJaon)) {
+            List<Category> categoryList = JSON.parseArray(categoryOneJaon, Category.class);
+//            log.info("从Redis缓存中查询到了所有的一级分类数据");
+            return categoryList ;
+        }
+
+        List<Category> categoryList =  categoryMapper.findOneCategory();
+        redisTemplate.opsForValue().set("category:one" ,
+                JSON.toJSONString(categoryList) ,
+                7 , TimeUnit.DAYS);
+
+        return categoryList;
     }
 
     @Override
