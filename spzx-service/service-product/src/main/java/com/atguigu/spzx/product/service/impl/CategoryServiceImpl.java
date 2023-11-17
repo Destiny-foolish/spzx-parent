@@ -6,6 +6,7 @@ import com.atguigu.spzx.product.mapper.CategoryMapper;
 import com.atguigu.spzx.product.service.CategoryService;
 import com.github.xiaoymin.knife4j.core.util.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -40,6 +41,7 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryList;
     }
 
+    @Cacheable(value = "category",key = "'all'")
     @Override
     public List<Category> findCategoryTree() {
         //1查询所有分类 返回list集合
