@@ -27,3 +27,12 @@ spring:
           uri: lb://service-product
           predicates:
             - Path=/*/product/**
+        - id: service-user
+          uri: lb://service-user
+          predicates:
+            - Path=/*/user/**
+
+  data:
+    redis:
+      host: localhost
+      port: 6379

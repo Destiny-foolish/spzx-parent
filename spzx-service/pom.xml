@@ -15,6 +15,7 @@
         <module>service-order</module>
         <module>service-product</module>
         <module>service-user</module>
+        <module>server-user</module>
     </modules>
 
     <properties>

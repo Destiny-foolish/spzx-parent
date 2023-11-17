@@ -1,13 +1,13 @@
 package com.atguigu.spzx.product.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.atguigu.spzx.manager.mapper.ProductDetailsMapper;
-import com.atguigu.spzx.manager.mapper.ProductMapper;
 import com.atguigu.spzx.model.dto.h5.ProductSkuDto;
 import com.atguigu.spzx.model.entity.product.Product;
 import com.atguigu.spzx.model.entity.product.ProductDetails;
 import com.atguigu.spzx.model.entity.product.ProductSku;
 import com.atguigu.spzx.model.vo.h5.ProductItemVo;
+import com.atguigu.spzx.product.mapper.ProductDetailsMapper;
+import com.atguigu.spzx.product.mapper.ProductMapper;
 import com.atguigu.spzx.product.mapper.ProductSkuMapper;
 import com.atguigu.spzx.product.service.ProductService;
 import com.github.pagehelper.PageHelper;
