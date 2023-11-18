@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface UserAddressMapper {
     List<UserAddress> findByUserId(Long userId);
+
+    UserAddress getById(Long id);
 }

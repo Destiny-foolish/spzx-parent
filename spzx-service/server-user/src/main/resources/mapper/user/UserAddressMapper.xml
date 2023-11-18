@@ -18,4 +18,10 @@
         user_id = #{userId}
     </select>
 
+    <select id="getById" resultMap="userAddressMap">
+        select <include refid="columns" />
+        from user_address
+        where
+        id = #{id}
+    </select>
 </mapper>

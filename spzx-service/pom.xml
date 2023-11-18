@@ -17,6 +17,7 @@
         <module>service-user</module>
         <module>server-user</module>
         <module>service-cart</module>
+        <module>service-pay</module>
     </modules>
 
     <properties>

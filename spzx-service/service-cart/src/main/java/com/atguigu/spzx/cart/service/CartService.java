@@ -18,4 +18,6 @@ public interface CartService {
     void clearCart();
 
     List<CartInfo> getAllCkecked();
+
+    void deleteChecked();
 }

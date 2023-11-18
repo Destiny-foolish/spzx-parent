@@ -1,6 +1,6 @@
 package com.atguigu.spzx.common.interceptor;
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import com.atguigu.spzx.model.entity.user.UserInfo;
 import com.atguigu.spzx.utils.AuthContextUtil;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,7 +18,8 @@ public class UserLoginAuthInterceptor implements HandlerInterceptor {
 
         // 如果token不为空，那么此时验证token的合法性
         String userInfoJSON = redisTemplate.opsForValue().get("user:spzx:" + request.getHeader("token"));
-        AuthContextUtil.setUserInfo(JSON.parseObject(userInfoJSON , UserInfo.class));
+//        AuthContextUtil.setUserInfo(JSON.parseObject(userInfoJSON,UserInfo.class));
+        AuthContextUtil.setUserInfo(JSON.parseObject(userInfoJSON,UserInfo.class));
         return true ;
 
     }

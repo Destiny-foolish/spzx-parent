@@ -4,6 +4,7 @@
     <file url="file://D:/z_spzxmavenrepo/org/springframework/boot/spring-boot-starter-parent/3.0.5/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-common/common-log/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-common/common-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spzx-common/common-service/src/main/java/com/atguigu/spzx/common/interceptor/UserLoginAuthInterceptor.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-common/common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-common/src/main/resources" charset="UTF-8" />
@@ -11,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/spzx-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-server-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service-client/service-cart-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spzx-service-client/service-order-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service-client/service-product-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service-client/service-user-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service-client/src/main/java" charset="UTF-8" />
@@ -18,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/spzx-service/server-user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service/service-cart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service/service-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spzx-service/service-pay/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service/service-product/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service/service-user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spzx-service/src/main/java" charset="UTF-8" />
