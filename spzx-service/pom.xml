@@ -14,7 +14,7 @@
     <modules>
         <module>service-order</module>
         <module>service-product</module>
-        <module>server-user</module>
+        <module>service-user</module>
         <module>service-cart</module>
         <module>service-pay</module>
     </modules>
