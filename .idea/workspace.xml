@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 订单模块">
-      <change afterPath="$PROJECT_DIR$/spzx-service/server-user/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-service/service-cart/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-service/service-order/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-service/service-pay/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-service/service-product/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-server-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-server-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-server-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-server-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/server-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/server-user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/server-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/server-user/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-cart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-cart/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-pay/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-pay/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-pay/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-pay/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-service/service-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-service/service-user/pom.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="9b19ac16-06e6-4ba1-a83c-784d77d933d0" name="Changes" comment="excel导入 图上传 订单模块 部署完结" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +66,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.22577855",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "spring.configuration.checksum": "497da6789799fc3302f5d2891aab06dd"
   },
   "keyToStringList": {
@@ -234,7 +212,7 @@
       <workItem from="1699000209664" duration="18585000" />
       <workItem from="1699418737507" duration="46303000" />
       <workItem from="1700020175972" duration="82651000" />
-      <workItem from="1700378309822" duration="1926000" />
+      <workItem from="1700378309822" duration="2807000" />
     </task>
     <task id="LOCAL-00001" summary="10.11">
       <created>1697005641875</created>
@@ -565,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700311399010</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="excel导入 图上传 订单模块 部署完结">
+      <created>1700381151417</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1700381151417</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="11.5" />
     <MESSAGE value="11.8" />
     <MESSAGE value="11.9新增产品分类管理，下一步是新增导入导出功能" />
     <MESSAGE value="11.9新增导入导出功能" />
@@ -608,7 +592,8 @@
     <MESSAGE value="excel导入 图上传 14完成" />
     <MESSAGE value="excel导入 图上传 购物车和订单完成" />
     <MESSAGE value="excel导入 图上传 订单模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel导入 图上传 订单模块" />
+    <MESSAGE value="excel导入 图上传 订单模块 部署完结" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel导入 图上传 订单模块 部署完结" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
